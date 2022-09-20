@@ -12,8 +12,9 @@
         />
       </form>
     </div>
+```
 
-    <!-- --------------------------------- js ---------------------------------- -->
+```javascript
     <script type="text/javascript" language="JavaScript">
       function BothFieldsIdenticalCaseSensitive() {
         var one = document.FormName.FieldA.value;
