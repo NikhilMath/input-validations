@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Validation</title>
+  </head>
+  <body>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                  HTML                                   -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div>
+      <form name="FormName" method="POST" action="/cgi-bin/script.cgi">
+        <input type="text" name="FieldA" size="19" />
+        <input type="text" name="FieldB" size="19" />
+        <input
+          type="submit"
+          onclick="return BothFieldsIdenticalCaseSensitive();"
+          value="Click Me"
+        />
+      </form>
+    </div>
+    <!-- ------------------------------ HTML end ------------------------------- -->
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                               JavaScript                                -->
+    <!-- ----------------------------------------------------------------------- -->
+    <script type="text/javascript" language="JavaScript">
+      function BothFieldsIdenticalCaseSensitive() {
+        var one = document.FormName.FieldA.value;
+        var another = document.FormName.FieldB.value;
+        if (one == another) {
+          return true;
+        }
+        alert("Oops, both fields must be identical.");
+        return false;
+      }
+
+      function BothFieldsIdenticalCaseInsensitive() {
+        var one = document.FormName.FieldA.value.toLowerCase();
+        var another = document.FormName.FieldB.value.toLowerCase();
+        if (one == another) {
+          return true;
+        }
+        alert("Oops, both fields must be identical.");
+        return false;
+      }
+    </script>
+    <!-- --------------------------- JavaScript end ---------------------------- -->
+  </body>
+</html>
