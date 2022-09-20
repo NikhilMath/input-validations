@@ -3,18 +3,17 @@
 ### HTML
 
 ```html
-    <!-- -------------------------------- html --------------------------------- -->
-    <div>
-      <form name="FormName" method="POST" action="/cgi-bin/script.cgi">
-        <input type="text" name="FieldA" size="19" />
-        <input type="text" name="FieldB" size="19" />
-        <input
-          type="submit"
-          onclick="return BothFieldsIdenticalCaseSensitive();"
-          value="Click Me"
-        />
-      </form>
-    </div>
+<div>
+  <form name="FormName" method="POST" action="/cgi-bin/script.cgi">
+    <input type="text" name="FieldA" size="19" />
+    <input type="text" name="FieldB" size="19" />
+    <input
+      type="submit"
+      onclick="return BothFieldsIdenticalCaseSensitive();"
+      value="Click Me"
+    />
+  </form>
+</div>
 ```
 
 ### JavaScript
